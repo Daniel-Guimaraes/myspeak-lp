@@ -1,113 +1,154 @@
-import Image from "next/image";
+import { Badge } from '@/components/Badge'
+import { Card } from '@/components/Card'
+import { Slides } from '@/components/Slides'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+    <main>
+      <header className="flex items-center justify-between px-6 pt-4 lg:px-10">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
+          src="/logo.png"
+          alt="logo"
+          width={250}
+          height={200}
           priority
+          className="h-16 w-20 md:h-20 md:w-24"
         />
-      </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href="https://onelink.to/atuz7w"
+          className="rounded-3xl bg-button px-4 py-2 text-sm font-bold text-white md:text-base"
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+          Baixar App
+        </Link>
+      </header>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
+      <section className="mb-10 px-6 md:mx-auto md:w-[600px] lg:my-12 lg:flex lg:w-[1024px] lg:flex-row lg:gap-10 lg:px-0 ">
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="my-10 text-center text-3xl font-semibold leading-10 tracking-wide lg:text-left lg:text-4xl">
+            <span className="text-heading">Myspeak:</span> O futuro do
+            aprendizado em inglês.
+          </h1>
+          <p className="text-center text-sm leading-7 tracking-wide lg:text-left lg:text-xl lg:font-light">
+            O mais novo e inovador aplicativo, que utiliza o poder da
+            inteligência artificial para revolucionar a forma como você aprende
+            inglês
           </p>
-        </a>
+          <div className="my-10 flex gap-4 lg:mb-0 lg:mt-14">
+            <Badge name="/apple-store-badge.svg" alt="Apple Store" />
+            <Badge name="/playstore-badge.png" alt="Playstore" />
+          </div>
+        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+        <Image
+          src="/mockup-cells.png"
+          alt="Mockup cells"
+          width={428}
+          height={380}
+          className="mx-auto h-[280px] w-[311px] md:h-[380px] md:w-[428px] lg:h-[450px] lg:w-[560px]"
+        />
+      </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+      <section className="bg-primary px-6 py-12 lg:px-10">
+        <div className="">
+          <h2 className="my-10 text-center text-2xl font-semibold leading-10 tracking-wide lg:mx-auto lg:w-[1024px]  lg:text-4xl">
+            Veja como o Myspeak te{' '}
+            <span className="text-heading">Impulsiona</span> na jornada do
+            aprendizado:
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-col lg:flex-row">
+            <Card
+              color="bg-red-100"
+              imageName="/image-card-01.png"
+              title="Tecnologia de Inteligência artificial"
+              description="Domine a pronúncia perfeita com a ajuda da nossa inteligência artificial!
+                Com o Myspeak, você pode praticar sua pronúncia em inglês usando comandos de voz.
+                Aprenda de forma interativa e melhore sua fala enquanto expande seu vocabulário"
+            />
+            <Card
+              color="bg-green-200"
+              imageName="/image-card-02.svg"
+              title="Flashcards Inteligentes"
+              description="Os flashcards são a solução perfeita para você! Essa ferramenta de
+              estudo tradicional, agora aprimorada com tecnologia moderna, te ajuda
+              a memorizar informações de forma rápida, eficaz e divertida."
+            />
+            <Card
+              color="bg-gray-400"
+              imageName="/image-card-03.svg"
+              title="Repetição Espaçada"
+              description="Cansado de esquecer as palavras que aprende em inglês? A repetição
+              espaçada é a solução que você procura! Essa técnica inovadora, utilizada
+              pelo Myspeak, te ajuda a memorizar vocabulário de forma rápida, eficaz e duradoura."
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="mb-10 px-6 lg:my-12 lg:flex lg:gap-8 lg:px-10">
+        <div className="mx-auto flex flex-col items-center justify-center md:w-[600px] lg:w-[1024px] lg:flex-row lg:gap-8">
+          <div className="lg:w-[476px]">
+            <h2 className="my-10 text-center text-2xl font-semibold leading-10 tracking-wide lg:text-left lg:text-4xl">
+              <span className="text-heading">Aprenda</span> inglês de forma
+              rápida e eficaz com Myspeak
+            </h2>
+            <p className="text-center text-sm leading-7 tracking-wide lg:text-left lg:text-xl lg:font-light">
+              Através de flashcards personalizados e da técnica de repetição
+              espaçada, o Myspeak otimiza seu processo de memorização de
+              palavras, te ajudando a alcançar seus objetivos de forma rápida e
+              eficaz.
+            </p>
+          </div>
+          <Image
+            src="/flashcard-myspeak-portrait.png"
+            alt="Mockup cells"
+            width={250}
+            height={480}
+            priority
+            className="mx-auto mt-10 h-[480px] w-[250px] lg:h-[560px] lg:w-[280px]"
+          />
+        </div>
+      </section>
+
+      <Slides />
+
+      <footer className="bg-gray-400 p-6 md:p-12">
+        <iframe
+          className="mx-auto h-[200px] w-full rounded-lg shadow-2xl md:h-[400px] lg:h-[500px] lg:w-[1024px]"
+          src="https://www.youtube.com/embed/ENNXdGwepAs"
+          title="Baixe o App MySpeak"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        ></iframe>
+
+        <div className="md:mx-auto md:w-[600px]">
+          <h2 className="my-10 text-center  text-2xl font-semibold leading-10 tracking-wide text-white lg:text-4xl">
+            Sua Jornada de Fluência Começa Agora com{' '}
+            <span className="text-heading">Myspeak</span>
+          </h2>
+          <div className="my-10 flex items-center justify-center gap-4 lg:mb-0 lg:mt-14">
+            <Badge name="/apple-store-badge.svg" alt="Apple Store" />
+            <Badge name="/playstore-badge.png" alt="Playstore" />
+          </div>
+          <div className="mt-10 flex items-center justify-center gap-4">
+            <div className="border-r pr-6">
+              <Link href="/terms" className="text-xs text-white">
+                Temos e condições
+              </Link>
+            </div>
+            <div>
+              <Link
+                href="/politics
+              "
+                className="text-xs text-white"
+              >
+                Politica de privacidade
+              </Link>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
-  );
+  )
 }
